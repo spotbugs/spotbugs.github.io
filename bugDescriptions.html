@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>FindBugs Bug Descriptions</title>
+<title>SpotBugs Bug Descriptions</title>
 <link rel="stylesheet" type="text/css" href="spotbugs.css"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head><body>
@@ -41,7 +41,7 @@
 </table> 
 </td>
 <td align="left" valign="top">
-<h1>FindBugs Bug Descriptions</h1>
+<h1>SpotBugs Bug Descriptions</h1>
 <p>This document lists the standard bug patterns reported by
 <a href="http://findbugs.sourceforge.net">SpotBugs</a> version 3.1.0-dev-20161105-d07b50f.</p>
 <h2>Summary</h2>
@@ -1426,7 +1426,7 @@ another package.</p>
 
 <p>
 This cast will always throw a ClassCastException.
-FindBugs tracks type information from instanceof checks,
+SpotBugs tracks type information from instanceof checks,
 and also uses more precise information about the types
 of values returned from methods and loaded from fields.
 Thus, it may have more precise information that just
@@ -1467,7 +1467,7 @@ since the Collection object has no reference to the declared generic type of the
 <p>There is one common/known exception to this. The <code>toArray()</code>
 method of lists returned by <code>Arrays.asList(...)</code> will return a covariantly
 typed array. For example, <code>Arrays.asArray(new String[] { "a" }).toArray()</code>
-will return a <code>String []</code>. FindBugs attempts to detect and suppress
+will return a <code>String []</code>. SpotBugs attempts to detect and suppress
 such cases, but may miss some.
 </p>
 
@@ -2343,10 +2343,10 @@ or both.</p>
 
 <p> A pointer which is null on an exception path is dereferenced here.&nbsp;
 This will lead to a <code>NullPointerException</code> when the code is executed.&nbsp;
-Note that because FindBugs currently does not prune infeasible exception paths,
+Note that because SpotBugs currently does not prune infeasible exception paths,
 this may be a false warning.</p>
 
-<p> Also note that FindBugs considers the default case of a switch statement to
+<p> Also note that SpotBugs considers the default case of a switch statement to
 be an exception path, since the default case is often infeasible.</p>
 
     
@@ -2440,7 +2440,7 @@ an indication of some misunderstanding or some other logic error.
 a null value will be dereferenced, which
 would generate a <code>NullPointerException</code> when the code is executed.
 Of course, the problem might be that the branch or statement is infeasible and that
-the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+the null pointer exception can't ever be executed; deciding that is beyond the ability of SpotBugs.
 </p>
 
     
@@ -2450,10 +2450,10 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
 <p> A reference value which is null on some exception control path is
 dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
 when the code is executed.&nbsp;
-Note that because FindBugs currently does not prune infeasible exception paths,
+Note that because SpotBugs currently does not prune infeasible exception paths,
 this may be a false warning.</p>
 
-<p> Also note that FindBugs considers the default case of a switch statement to
+<p> Also note that SpotBugs considers the default case of a switch statement to
 be an exception path, since the default case is often infeasible.</p>
 
     
@@ -4462,9 +4462,9 @@ Map.get(key) lookup.</p>
     <p>This code constructs an HTTP Cookie using an untrusted HTTP parameter. If this cookie is added to an HTTP response, it will allow a HTTP response splitting
 vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of HTTP response splitting.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
-vulnerabilities that FindBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that SpotBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4476,9 +4476,9 @@ consider using a commercial static analysis or pen-testing tool.
     <p>This code directly writes an HTTP parameter to an HTTP header, which allows for a HTTP response splitting
 vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of HTTP response splitting.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
-vulnerabilities that FindBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that SpotBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4492,9 +4492,9 @@ but it does not properly neutralize absolute path sequences such as "/abs/path" 
 
 See <a href="http://cwe.mitre.org/data/definitions/36.html">http://cwe.mitre.org/data/definitions/36.html</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of absolute path traversal.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
-vulnerabilities that FindBugs doesn't report. If you are concerned about absolute path traversal, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of absolute path traversal.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that SpotBugs doesn't report. If you are concerned about absolute path traversal, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4507,9 +4507,9 @@ consider using a commercial static analysis or pen-testing tool.
 
 See <a href="http://cwe.mitre.org/data/definitions/23.html">http://cwe.mitre.org/data/definitions/23.html</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of relative path traversal.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
-vulnerabilities that FindBugs doesn't report. If you are concerned about relative path traversal, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of relative path traversal.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that SpotBugs doesn't report. If you are concerned about relative path traversal, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4540,9 +4540,9 @@ be used to make the prepared statement do something unexpected and undesirable.
     <p>This code directly writes an HTTP parameter to JSP output, which allows for a cross site scripting
 vulnerability. See <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of cross site scripting.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
-vulnerabilities that FindBugs doesn't report. If you are concerned about cross site scripting, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of cross site scripting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
+vulnerabilities that SpotBugs doesn't report. If you are concerned about cross site scripting, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4554,9 +4554,9 @@ consider using a commercial static analysis or pen-testing tool.
 for a reflected cross site scripting
 vulnerability. See <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of cross site scripting.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
-vulnerabilities that FindBugs doesn't report. If you are concerned about cross site scripting, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of cross site scripting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
+vulnerabilities that SpotBugs doesn't report. If you are concerned about cross site scripting, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4568,9 +4568,9 @@ consider using a commercial static analysis or pen-testing tool.
     <p>This code directly writes an HTTP parameter to Servlet output, which allows for a reflected cross site scripting
 vulnerability. See <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>
 for more information.</p>
-<p>FindBugs looks only for the most blatant, obvious cases of cross site scripting.
-If FindBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
-vulnerabilities that FindBugs doesn't report. If you are concerned about cross site scripting, you should seriously
+<p>SpotBugs looks only for the most blatant, obvious cases of cross site scripting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
+vulnerabilities that SpotBugs doesn't report. If you are concerned about cross site scripting, you should seriously
 consider using a commercial static analysis or pen-testing tool.
 </p>
 
@@ -4617,7 +4617,7 @@ cast will not fail.
 <p>
 This code performs an unchecked cast of the return value of a method.
 The code might be calling the method in such a way that the cast is guaranteed to be
-safe, but FindBugs is unable to verify that the cast is safe.  Check that your program logic ensures that this
+safe, but SpotBugs is unable to verify that the cast is safe.  Check that your program logic ensures that this
 cast will not fail.
 </p>
 
@@ -4686,7 +4686,7 @@ used.
 </p>
 <p>
 Note that Sun's javac compiler often generates dead stores for
-final local variables.  Because FindBugs is a bytecode-based tool,
+final local variables.  Because SpotBugs is a bytecode-based tool,
 there is no easy way to eliminate these false positives.
 </p>
 
@@ -4815,10 +4815,10 @@ you intend.
 </p>
 <p>If you really intend to invoke the inherited method,
 invoke it by invoking the method on super (e.g., invoke super.foo(17)), and
-thus it will be clear to other readers of your code and to FindBugs
+thus it will be clear to other readers of your code and to SpotBugs
 that you want to invoke the inherited method, not the method in the outer class.
 </p>
-<p>If you call <code>this.foo(17)</code>, then the inherited method will be invoked. However, since FindBugs only looks at
+<p>If you call <code>this.foo(17)</code>, then the inherited method will be invoked. However, since SpotBugs only looks at
 classfiles, it
 can't tell the difference between an invocation of <code>this.foo(17)</code> and <code>foo(17)</code>, it will still
 complain about a potential ambiguous invocation.
@@ -5017,7 +5017,7 @@ for null.  This may lead to a <code>NullPointerException</code> when the code is
 a null value will be dereferenced, which
 would generate a <code>NullPointerException</code> when the code is executed.
 Of course, the problem might be that the branch or statement is infeasible and that
-the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+the null pointer exception can't ever be executed; deciding that is beyond the ability of SpotBugs.
 Due to the fact that this value had been previously tested for nullness,
 this is a definite possibility.
 </p>
@@ -5226,7 +5226,7 @@ return value of <code>String.toLowerCase()</code>).
 </p>
 <p>We are guessing that ignoring the return value might be a bad idea just from
 a simple analysis of the body of the method. You can use a @CheckReturnValue annotation
-to instruct FindBugs as to whether ignoring the return value of this method
+to instruct SpotBugs as to whether ignoring the return value of this method
 is important or acceptable.
 </p>
 <p>Please investigate this closely to decide whether it is OK to ignore the return value.
@@ -5246,7 +5246,7 @@ Common false-positive cases include:</p>
 <p>- The method is called to trigger the class loading which may have a side effect.</p>
 <p>- The method is called just to get some exception.</p>
 <p>If you feel that our assumption is incorrect, you can use a @CheckReturnValue annotation
-to instruct FindBugs that ignoring the return value of this method is acceptable.
+to instruct SpotBugs that ignoring the return value of this method is acceptable.
 </p>
 
     
