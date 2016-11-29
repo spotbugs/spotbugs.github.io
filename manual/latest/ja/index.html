@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>はじめに &mdash; spotbugs 3.1.0-SNAPSHOT ドキュメント</title>
+    <title>SpotBugs manual &mdash; spotbugs 3.1.0-SNAPSHOT ドキュメント</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,11 +24,15 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="spotbugs 3.1.0-SNAPSHOT ドキュメント" href="index.html" />
-    <link rel="next" title="インストール" href="installing.html" />
-    <link rel="prev" title="SpotBugs manual" href="index.html" /> 
+    <link rel="top" title="spotbugs 3.1.0-SNAPSHOT ドキュメント" href="#" />
+    <link rel="next" title="はじめに" href="introduction.html" /> 
   </head>
   <body role="document">
+    
+  
+
+  
+
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>ナビゲーション</h3>
       <ul>
@@ -36,12 +40,12 @@
           <a href="genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="installing.html" title="インストール"
+          <a href="introduction.html" title="はじめに"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
-          <a href="index.html" title="SpotBugs manual"
-             accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">spotbugs 3.1.0-SNAPSHOT ドキュメント</a> &raquo;</li> 
+          <a href="../en/index.html" title="English"
+             >English</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">spotbugs 3.1.0-SNAPSHOT ドキュメント</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,14 +54,32 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="introduction">
-<span id="introduction"></span><h1>はじめに<a class="headerlink" href="#introduction" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>SpotBugs は、Java プログラムの中のバグを見つけるプログラムです。このプログラムは、「バグ パターン」の実例を探します。「バグ パターン」とは、エラーとなる可能性の高いコードの事例です。</p>
-<p>この文書は、SpotBugs バージョン 3.1.0-dev-20161105-d07b50f について説明してます。私たちは、 SpotBugs に対するフィードバックを心待ちにしています。どうぞ、 SpotBugs Web ページ にアクセスしてください。SpotBugs についての最新情報、連絡先および SpotBugs GitHub Organizationなどのサポート情報を入手することができます。</p>
-<div class="section" id="requirements">
-<span id="requirements"></span><h2>必要条件<a class="headerlink" href="#requirements" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SpotBugs を使用するには、 Java バージョン 1.8 以降のバージョンと互換性のあるランタイム環境が必要です。SpotBugs は、プラットフォーム非依存であり、 GNU/Linux 、 Windows 、 MacOS X プラットフォーム上で動作することが知られています。</p>
-<p>SpotBugs を使用するためには、少なくとも 512 MB のメモリが必要です。巨大なプロジェクトを解析するためには、それより多くのメモリが必要とされることがあります。</p>
+  <div class="section" id="spotbugs-manual">
+<h1>SpotBugs manual<a class="headerlink" href="#spotbugs-manual" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>This manual is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License.
+To view a copy of this license, visit <a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/1.0/">http://creativecommons.org/licenses/by-nc-sa/1.0/</a> or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.</p>
+<p>The name FindBugs and the FindBugs logo are trademarked by the University of Maryland.</p>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>索引</span></a></li>
+<li><a class="reference internal" href="search.html"><span>検索ページ</span></a></li>
+</ul>
+</div>
+<div class="section" id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">はじめに</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#requirements">必要条件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">インストール</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#extracting-the-distribution">配布パッケージの展開</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -67,24 +89,20 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">目次</a></h3>
+  <h3><a href="#">目次</a></h3>
   <ul>
-<li><a class="reference internal" href="#">はじめに</a><ul>
-<li><a class="reference internal" href="#requirements">必要条件</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">SpotBugs manual</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#contents">Contents</a></li>
 </ul>
 
-  <h4>前のトピックへ</h4>
-  <p class="topless"><a href="index.html"
-                        title="前の章へ">SpotBugs manual</a></p>
   <h4>次のトピックへ</h4>
-  <p class="topless"><a href="installing.html"
-                        title="次の章へ">インストール</a></p>
+  <p class="topless"><a href="introduction.html"
+                        title="次の章へ">はじめに</a></p>
   <div role="note" aria-label="source link">
     <h3>このページ</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/introduction.txt"
+      <li><a href="_sources/index.txt"
             rel="nofollow">ソースコードを表示</a></li>
     </ul>
    </div>
@@ -112,12 +130,12 @@
           <a href="genindex.html" title="総合索引"
              >索引</a></li>
         <li class="right" >
-          <a href="installing.html" title="インストール"
+          <a href="introduction.html" title="はじめに"
              >次へ</a> |</li>
         <li class="right" >
-          <a href="index.html" title="SpotBugs manual"
-             >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">spotbugs 3.1.0-SNAPSHOT ドキュメント</a> &raquo;</li> 
+          <a href="../en/index.html" title="English"
+             >English</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">spotbugs 3.1.0-SNAPSHOT ドキュメント</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

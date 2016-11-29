@@ -9,14 +9,14 @@ docker run -it -v $(pwd):/documents spotbugs-sphinx make gettext
 # create .po files by new .pot files
 docker run -it -v $(pwd):/documents spotbugs-sphinx sphinx-intl update -p .build/locale -l ja
 
-# make HTML files for each language
-rm -rf manual/en && mkdir -p manual/en
-rm -rf manual/ja && mkdir -p manual/ja
+# make HTML files for each directory
+rm -rf manual/latest && mkdir -p manual/latest
+rm -rf manual/3.1 && mkdir -p manual/3.1
 
 docker run -it -v $(pwd):/documents spotbugs-sphinx make html
-cp -R .build/html manual/en/latest
-cp -R .build/html manual/en/3.1
+cp -R .build/html manual/latest/en
+cp -R .build/html manual/3.1/en
 
 docker run -it -v $(pwd):/documents spotbugs-sphinx make -e SPHINXOPTS="-D language='ja'" html
-cp -Rf .build/html manual/ja/latest
-cp -Rf .build/html manual/ja/3.1
+cp -Rf .build/html manual/latest/ja
+cp -Rf .build/html manual/3.1/ja

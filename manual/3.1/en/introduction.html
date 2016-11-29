@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installing &mdash; spotbugs 3.1.0-SNAPSHOT documentation</title>
+    <title>Introduction &mdash; spotbugs 3.1.0-SNAPSHOT documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,9 +24,15 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spotbugs 3.1.0-SNAPSHOT documentation" href="index.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Installing" href="installing.html" />
+    <link rel="prev" title="SpotBugs manual" href="index.html" /> 
   </head>
   <body role="document">
+    
+  
+
+  
+
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -34,8 +40,14 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="introduction.html" title="Introduction"
+          <a href="installing.html" title="Installing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="SpotBugs manual"
              accesskey="P">previous</a> |</li>
+        <li class="right" >
+          <a href="../ja/introduction.html" title="日本語"
+             >日本語</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">spotbugs 3.1.0-SNAPSHOT documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -45,26 +57,19 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="installing">
-<span id="installing"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
-<p>This chapter explains how to install SpotBugs.</p>
-<div class="section" id="extracting-the-distribution">
-<span id="extracting-the-distribution"></span><h2>Extracting the Distribution<a class="headerlink" href="#extracting-the-distribution" title="Permalink to this headline">¶</a></h2>
-<p>The easiest way to install SpotBugs is to download a binary distribution.
-Binary distributions are available in <a class="reference external" href="https://github.com/spotbugs/spotbugs/archive/3.1.0_preview2.tar.gz">gzipped tar format</a> and <a class="reference external" href="https://github.com/spotbugs/spotbugs/archive/3.1.0_preview2.zip">zip format</a>.
-Once you have downloaded a binary distribution, extract it into a directory of your choice.</p>
-<p>Extracting a gzipped tar format distribution:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ gunzip -c spotbugs-3.1.0-dev-20161105-d07b50f.tar.gz | tar xvf -
-</pre></div>
-</div>
-<p>Extracting a zip format distribution:</p>
-<div class="highlight-python"><div class="highlight"><pre>C:\Software&gt; unzip spotbugs-3.1.0-dev-20161105-d07b50f.zip
-</pre></div>
-</div>
-<p>Usually, extracting a binary distribution will create a directory ending in <code class="docutils literal"><span class="pre">spotbugs-3.1.0-dev-20161105-d07b50f</span></code>.
-For example, if you extracted the binary distribution from the <code class="docutils literal"><span class="pre">C:\Software</span> <span class="pre">directory</span></code>, then the SpotBugs software will be extracted into the directory <code class="docutils literal"><span class="pre">C:\Software\findbugs-3.1.0-dev-20161105-d07b50f</span></code>.
-This directory is the SpotBugs home directory.
-We&#8217;ll refer to it as <code class="docutils literal"><span class="pre">$SPOTBUGS_HOME</span></code> (or <code class="docutils literal"><span class="pre">%SPOTBUGS_HOME%</span></code> for Windows) throughout this manual.</p>
+  <div class="section" id="introduction">
+<span id="introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>SpotBugs is a program to find bugs in Java programs.
+It looks for instances of &#8220;bug patterns&#8221; &#8212; code instances that are likely to be errors.</p>
+<p>This document describes version 3.1.0-SNAPSHOT of SpotBugs.
+We are very interested in getting your feedback on SpotBugs.
+Please visit the SpotBugs web page for the latest information on SpotBugs, contact information, and support resources such as information about the SpotBugs GitHub organization.</p>
+<div class="section" id="requirements">
+<span id="requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>To use SpotBugs, you need a runtime environment compatible with Java version 1.8 or later.
+SpotBugs is platform independent, and is known to run on GNU/Linux, Windows, and MacOS X platforms.</p>
+<p>You should have at least 512 MB of memory to use SpotBugs.
+To analyze very large projects, more memory may be needed.</p>
 </div>
 </div>
 
@@ -76,19 +81,22 @@ We&#8217;ll refer to it as <code class="docutils literal"><span class="pre">$SPO
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installing</a><ul>
-<li><a class="reference internal" href="#extracting-the-distribution">Extracting the Distribution</a></li>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="introduction.html"
-                        title="previous chapter">Introduction</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">SpotBugs manual</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="installing.html"
+                        title="next chapter">Installing</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/installing.txt"
+      <li><a href="_sources/introduction.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -116,8 +124,14 @@ We&#8217;ll refer to it as <code class="docutils literal"><span class="pre">$SPO
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="introduction.html" title="Introduction"
+          <a href="installing.html" title="Installing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="SpotBugs manual"
              >previous</a> |</li>
+        <li class="right" >
+          <a href="../ja/introduction.html" title="日本語"
+             >日本語</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">spotbugs 3.1.0-SNAPSHOT documentation</a> &raquo;</li> 
       </ul>
     </div>
