@@ -1,0 +1,3 @@
+[submodule "build"]
+	path = build
+	url = git@github.com:spotbugs/spotbugs.github.io.git
