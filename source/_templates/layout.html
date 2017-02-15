@@ -1,0 +1,11 @@
+{% extends "basic/layout.html" %}
+{% block header %}
+  {%- if language is equalto 'en' %}
+    {%- if rellinks.append((pathto('../ja/', 1) + pagename, '日本語', '', '日本語')) %}{% endif %}
+  {% endif %}
+  {%- if language is equalto 'ja' %}
+    {%- if rellinks.append((pathto('../en/', 1) + pagename, 'English', '', 'English')) %}{% endif %}
+  {% endif %}
+
+  {{ super() }}
+{% endblock %}
