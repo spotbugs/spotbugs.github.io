@@ -5,9 +5,9 @@
       This is the Eclipse update site for FindBugs features.
    </description>
 
-   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.1.0.20170205-1486302082588.jar"
+   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.1.0.20170208-1486515382262.jar"
             id="edu.umd.cs.findbugs.plugin.eclipse"
-            version="3.1.0.20170205-1486302082588">
+            version="3.1.0.20170208-1486515382262">
       <category name="FindBugs"/>
    </feature>
 

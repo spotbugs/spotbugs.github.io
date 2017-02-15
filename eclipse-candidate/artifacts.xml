@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='file:/Users/kengo/Documents/github/spotbugs/eclipsePlugin/build/site/eclipse-candidate/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1486302096884'/>
+    <property name='p2.timestamp' value='1486515401520'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
@@ -11,19 +11,19 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
   <artifacts size='2'>
-    <artifact classifier='org.eclipse.update.feature' id='edu.umd.cs.findbugs.plugin.eclipse' version='3.1.0.20170205-1486302082588'>
+    <artifact classifier='org.eclipse.update.feature' id='edu.umd.cs.findbugs.plugin.eclipse' version='3.1.0.20170208-1486515382262'>
       <properties size='4'>
         <property name='artifact.size' value='1876'/>
         <property name='download.size' value='1876'/>
-        <property name='download.md5' value='4f83fd7fcabf35afe0d26c99cc2ada4b'/>
+        <property name='download.md5' value='cbfb0875d2b67048f2f32f0f656cd768'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='edu.umd.cs.findbugs.plugin.eclipse' version='3.1.0.20170205-1486302082588'>
+    <artifact classifier='osgi.bundle' id='edu.umd.cs.findbugs.plugin.eclipse' version='3.1.0.20170208-1486515382262'>
       <properties size='3'>
-        <property name='artifact.size' value='6254204'/>
-        <property name='download.size' value='6254204'/>
-        <property name='download.md5' value='2b023b8eee2b291d5546549377e6223f'/>
+        <property name='artifact.size' value='6378346'/>
+        <property name='download.size' value='6378346'/>
+        <property name='download.md5' value='c465f1c85cbdccb7ea2e78341febf676'/>
       </properties>
     </artifact>
   </artifacts>
