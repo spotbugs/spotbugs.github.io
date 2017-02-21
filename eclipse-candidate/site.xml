@@ -2,18 +2,18 @@
 <site>
 
    <description url="http://findbugs.cs.umd.edu/eclipse">
-      This is the Eclipse update site for FindBugs features.
+      This is the Eclipse update site for SpotBugs features.
    </description>
 
-   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.1.0.20170205-1486302082588.jar"
+   <feature url="features/edu.umd.cs.findbugs.plugin.eclipse_3.1.01.20170221-1487629663349.jar"
             id="edu.umd.cs.findbugs.plugin.eclipse"
-            version="3.1.0.20170205-1486302082588">
-      <category name="FindBugs"/>
+            version="3.1.01.20170221-1487629663349">
+      <category name="SpotBugs"/>
    </feature>
 
-   <category-def name="FindBugs" label="FindBugs">
+   <category-def name="SpotBugs" label="SpotBugs">
       <description>
-         This is the Eclipse category for FindBugs features.
+         This is the Eclipse category for SpotBugs features.
       </description>
    </category-def>
 
