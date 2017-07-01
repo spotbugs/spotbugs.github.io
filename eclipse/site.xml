@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+   <description url="https://spotbugs.github.io/eclipse">
+      This is the Eclipse update site for SpotBugs features.
+   </description>
+
+   <feature url="features/com.github.spotbugs.plugin.eclipse_3.1.0.20170610-1497060633070.jar"
+            id="com.github.spotbugs.plugin.eclipse"
+            version="3.1.0.20170610-1497060633070">
+      <category name="SpotBugs"/>
+   </feature>
+
+   <category-def name="SpotBugs" label="SpotBugs">
+      <description>
+         This is the Eclipse category for SpotBugs features.
+      </description>
+   </category-def>
+
+</site>
