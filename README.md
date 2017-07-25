@@ -1,6 +1,8 @@
 SpotBugs GitHub pages
 =====================
 
+[![Build Status](https://travis-ci.org/spotbugs/spotbugs.github.io.svg?branch=master)](https://travis-ci.org/spotbugs/spotbugs.github.io)
+
 This repository hosts following pages:
 
 * [GitHub homepage](https://spotbugs.github.io/)

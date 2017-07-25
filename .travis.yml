@@ -1,0 +1,40 @@
+# This file builds Eclipse Plugin with Eclipse,
+# and push Daily Release Eclipse Update Site for Eclipse Plugin.
+
+language: java
+jdk: oraclejdk8
+
+install:
+  - cd /tmp
+  - wget 'http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.6.3-201703010400/eclipse-SDK-4.6.3-linux-gtk-x86_64.tar.gz&r=1' -O eclipse.tar.gz
+  - tar xfz eclipse.tar.gz eclipse
+  - git clone https://github.com/spotbugs/spotbugs.git
+  - echo eclipseRoot.dir=/tmp/eclipse > /tmp/spotbugs/eclipsePlugin/local.properties
+
+script:
+  - cd /tmp/spotbugs
+  - ./gradlew :eclipsePlugin:eclipseSite
+
+before_deploy:
+  - cd ${TRAVIS_BUILD_DIR}
+  - git checkout ${TRAVIS_BRANCH}
+  - rm -rf ${TRAVIS_BUILD_DIR}/eclipse-daily
+  - cp -R /tmp/spotbugs/eclipsePlugin/build/site/eclipse-daily .
+  # To push changes via https, store private token to ~/.netrc
+  # https://docs.travis-ci.com/user/private-dependencies/#API-Token
+  - echo machine github.com >> ~/.netrc
+  - echo login ${GITHUB_TOKEN} >> ~/.netrc
+  - git config user.email "travis@spotbugs.github.io"
+  - git config user.name "Deployment Bot (from Travis CI)"
+  - git add eclipse-daily
+  - git commit -m "Update contents for Eclipse Daily Update Site by build ${TRAVIS_BUILD_NUMBER}"
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: git push
+  on:
+    branch: master
+    repo: spotbugs/spotbugs.github.io
+    # This condition is necessary, or pushing changes will trigger infinite loop (next build and push)
+    condition: $TRAVIS_EVENT_TYPE = cron
